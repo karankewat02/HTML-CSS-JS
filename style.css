@@ -1,0 +1,360 @@
+@import url(prakharutility.css);
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --primary: white;
+    --secondary:#101010;
+    --tertiary:#b8433b;
+    --Quatarnery:#b8433b;
+    --Pentanory:#102dae;
+    --senary:#017856;
+    --septanary:#242424;
+    --octanary:#2f442f;
+    --link-color:#7595d7;
+}
+
+
+/* CENTERING */
+.center-f{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-p{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+
+.center-g{
+    display: grid;
+    place-items: center;
+}
+
+.center-x{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.center-y{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.widthANDmargin{
+    width: 70%;
+    margin: auto;
+}
+
+.opacity{
+    opacity: 0;
+}
+.hide{
+    visibility: hidden;
+}
+
+button{
+    border: 0;
+    font-size: 1.5em;
+    padding: 1.2rem 4rem;
+    border-radius: 2rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.link::after{
+    content: "\f35d";
+}
+
+a{
+    font-family: inherit;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* .slideUp{
+    animation: slideup 1000ms;
+    animation-delay: 200ms;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0000;
+    color: white;
+    font-family: 'Gilroy-Regular ☞';
+    letter-spacing: 0.15px;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2% 15%;
+    z-index: 10;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image:linear-gradient(#000 40%,rgba(0, 0, 0, 0.534) 90%, #0000);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    padding: 0 2rem;
+}
+
+nav img{
+    width: 7rem;
+}
+
+nav .burgerMenu{
+    display: none;
+}
+
+.background{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/image-mock.jpg);
+    background-size: cover;
+
+}
+
+.home{  
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: var(--secondary);
+}
+
+.alert{
+    background-color: var(--septanary);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.home .center-f{
+    min-height: 70vh;
+    flex-direction: column;
+    text-align: center;
+}
+.home h2{
+    margin-block:2rem;
+}
+
+.mockupContainer{
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/video-bg.png);
+    background-repeat: no-repeat;
+}
+
+.mockup{
+    position: relative;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-40%);
+}
+.mockupImg{
+    display: block;
+    position: absolute;
+}
+.mockupImg:nth-of-type(1){
+    bottom: -30vh;
+    z-index: 1;
+}
+.mockupImg:nth-of-type(2){
+    transform: translate(50%);
+    bottom: -20vh;
+    z-index: 2;
+}
+.mockupImg:nth-of-type(3){
+    transform: translate(100%);
+    bottom: -10vh;
+    z-index: 3;
+}
+.mockupImg:nth-of-type(4){
+    transform: translate(150%);
+    bottom: -20vh;
+    z-index: 2;
+}
+.mockupImg:nth-of-type(5){
+    transform: translate(200%);
+    bottom: -30vh;
+    z-index: 1;
+}
+
+.reward{
+    min-height: 100vh;
+    background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/deserve-more-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: unset;
+}
+
+.reward div{
+    margin-inline :15%;
+    width: 40%;
+}
+
+.reward div p:first-of-type{
+    margin-top: 2rem;
+}
+.reward div p:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+
+.rewardCompanies{
+    background-color: var(--primary);
+    padding: 5vh 15%;
+    color: #000;
+    font-weight: 600;
+}
+
+.rewardCompanies img {
+    width: 3rem;
+    margin-left: 2rem;
+}
+
+
+.reward-2{
+    background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/money-matters-bg.jpg);
+}
+
+.reward-2 div{
+    width: 60%;
+}
+
+.reward div p:nth-of-type(2){
+    width: 50%;
+    line-height: 2;
+}
+
+.parlax{
+    width: 100%;
+    min-height: 50vh;
+}
+
+@media only screen and (max-width: 900px) {
+    nav .burgerMenu{
+        display: block;
+    }
+    .burgerMenu {
+        margin-left: auto;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        /* display: none; */
+        z-index: 100;
+    }
+    .burgerMenu div {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: .45rem 0;
+        transition-duration: 300ms;
+        transform-origin: .1rem;
+    }
+    .burgerMenu div:nth-of-type(2){
+        width: 50%;
+        margin-left: 50%;
+    }
+    nav ul {
+        position: fixed;
+        inset: 0;
+        background-color: var(--secondary);
+        flex-direction: column;
+        min-height: 100vh;
+        padding-top: 30vh;
+        transform: translateX(200%);
+        transition-duration: 300ms;
+    }
+
+    nav ul li{
+        background-color: var(--septanary);
+        padding: 1rem 2rem;
+        width: 50%;
+        text-align: center;
+        margin: 1rem 0;
+        border-radius: .5rem;
+    }
+    .activeMenu {
+        transform: translateX(0%) !important;
+
+    }
+    .active div:first-of-type {
+        transform: rotateZ(45deg);
+    }
+    .active div:nth-of-type(2) {
+        transform: translateX(-300%);
+        
+    }
+    .active div:nth-of-type(3) {
+        transform: rotateZ(-45deg);
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    button{
+        transform: scale(.7);
+    }
+
+    .mockupContainer{
+        min-height: 60vh;
+    }
+    .mockup{
+        left: 0;
+        bottom: -15rem;
+        transform: translateX(-50%) scale(.5);
+    }
+
+    .reward{
+        background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/deserve-more-bg-mobile.jpg);
+        background-size: cover;
+    }
+    .reward div{
+        margin-top: 2rem;
+        width: 70%;
+    }
+    .reward div p:nth-of-type(2){
+        width: 100%;
+    }
+    .reward button{
+        margin-top: 40vh;
+        margin-bottom: 5vh;
+    }
+
+    .reward-2{
+        background-image: url(https://web-images.credcdn.in/_next/assets/images/home-page/money-matters-bg-mobile.jpg);
+    }
+    
+    .reward-2 div{
+        margin-top: 50vh;
+    }
+    .reward button{
+        margin-top: 2rem;
+    }
+}

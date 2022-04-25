@@ -1,2 +1,2 @@
-# HTML-CSS-JS
-This Repository consists of various Basic HTML , CSS , JS Project .  
+# setStartUp
+Start up website based on HTML , CSS , JS and plugins with inspiration of CRED and black aesthetics.
