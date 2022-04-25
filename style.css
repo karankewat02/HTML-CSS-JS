@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+
+    --fontFamily:'Red Hat Display', sans-serif;
+    --fontSize:16px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+a{
+    text-decoration: none;
+    color: var(--brightBlue);
+    font-weight: 600;
+}
+
+.card{
+    width: 30%;
+    margin: 5% 35%;
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px gray;
+}
+.hero img{
+    width: 100%;
+}
+
+.summary{
+    text-align: center;
+    padding:5% 10%;
+}
+
+.summary h1{
+    color: var(--darkBlue);
+}
+.summary p{
+    color: var(--desaturatedBlue);
+    font-weight: 500;
+}
+
+.annualPlan{
+    width: 76%;
+    margin:0 10%;
+    padding: 1rem 2%;
+    background-color: var(--veryPaleBlue);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+}
+.annualPlan p{
+    margin: 0;
+}
+.annualPlan div{
+    padding:0 1rem;
+}
+.annualPlan div p:first-of-type{
+    font-weight: 900;
+}
+.annualPlan p:last-of-type{
+    margin-left: auto;
+    color: var(--darkBlue);
+    
+}
+.annualPlan p:hover:last-of-type{
+    color: var(--desaturatedBlue);
+}
+
+.buttons{
+    text-align: center;
+    padding: 5%;
+}
+.buttons button{
+    border: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    font-weight: 900;
+}
+.buttons button:first-of-type{
+    background-color: var(--brightBlue);
+    color:white;
+}
+.buttons button:hover:first-of-type{
+    background-color: var(--desaturatedBlue);
+}
+.buttons button:last-of-type{
+    background-color: white;
+    color: var(--desaturatedBlue);
+}
+.buttons button:hover:last-of-type{
+    color: var(--darkBlue);
+}
+
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-image: url(images/pattern-background-mobile.svg); 
+    }
+    .card{
+        width: 90%;
+        margin: 5% 
+    }
+    
+}
