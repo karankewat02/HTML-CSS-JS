@@ -1,0 +1,120 @@
+:root{
+    --mainbgColor :  hsl(233, 47%, 7%);
+    --bgColor : hsl(244, 38%, 16%);
+    --headingColor : hsl(0, 0%, 100%);
+    --statHeading:hsla(0, 0%, 100%, 0.6);
+    --paraColor : hsla(0, 0%, 100%, 0.75);
+    --accentColor :  hsl(277, 64%, 61%);
+}
+body{
+    background-color: var(--mainbgColor);
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 80%;
+    margin: 10%;
+    overflow: hidden;
+    border-radius: .5em;
+    background-color: var(--bgColor);
+}
+
+.img{
+    position: relative;
+    background-size: cover;
+    background-image: url('images/image-header-desktop.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    padding:10% 16%;
+}
+.accentColor{
+    color: var(--accentColor);
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    color:var(--headingColor);
+}
+h2{
+    color: var(--headingColor);
+    font-family: 'Inter', sans-serif;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+p{
+    line-height: 180%;
+    letter-spacing: .5px;
+    font-size: 14px;
+    color:var(--paraColor);
+    font-family: 'Inter', sans-serif;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.stats p{
+    font-variant: small-caps;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: var(--statHeading)
+}
+
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(280deg 100% 30% / 50%)
+}
+.mblImg{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .img{
+        display: none;
+    }
+    .mblImg{
+        display: block;
+        position: relative; 
+        background-size: contain;       
+        background-image: url('images/image-header-mobile.jpg');
+        height: 15rem;
+    }
+    .main{
+        grid-template-columns: repeat(1,2fr);
+        width: 90%;
+        margin: 20% 5% 20% 5%;
+        text-align: center;
+        font-size: 90%;
+    }
+    .content{
+        padding: 10%;
+    }
+    h1{
+        font-size: 190%;
+    }
+    h2{
+        font-size: 170%;
+    }   
+    .stats{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .stats div:first-child{
+        margin-top: 0%;
+    }
+    .stats div{
+        margin-top: 10%;
+    }
+    
+
+}
