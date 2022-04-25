@@ -1,0 +1,100 @@
+:root{
+    --brightOrange:hsl(31, 77%, 52%);
+    --darkCyan:hsl(184, 100%, 22%);
+    --veryDarkCyan:hsl(179, 100%, 13%);
+    background-color: hsl(0, 0%, 95%);   
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 60%;
+    margin: 10% auto;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+
+
+
+.container div{
+    letter-spacing: .5px;
+    padding: 16%;
+}
+.container div:nth-child(1){
+    background-color: var(--brightOrange);
+}
+.container div:nth-child(2){
+    background-color: var(--darkCyan);
+}
+.container div:nth-child(3){
+    background-color: var(--veryDarkCyan);
+}
+
+
+
+p{
+    font-size: small;
+    color:hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 180%;
+}
+
+
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+}
+
+
+
+
+
+
+div:nth-child(1) button{
+    color: var(--brightOrange);
+}
+div:nth-child(2) button{
+    color:var(--darkCyan);
+}
+div:nth-child(3) button{    
+    color: var(--veryDarkCyan);
+}
+button{
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 30%;
+    padding: 5% 10%;
+    border-radius: 2rem;
+    border: 2px solid hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 95%);
+    transition-duration: 100ms;
+}
+
+div button:hover,div button:active{
+    color :hsl(0, 0%, 95%);
+    background-color: transparent;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        margin: 20% auto;
+        width: 90%;
+    }
+    button{
+        margin-top: 10%;
+    }
+    h1{
+        font-size: 270%;
+    }
+
+
+  }
+
