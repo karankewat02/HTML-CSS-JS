@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 4px solid red; */
+}
+
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #f8ceec;
+    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    font-family: 'Oxygen', sans-serif;
+    overflow-x: hidden;
+}
+
+@keyframes fade {
+    0%{opacity: 100%;}
+    99%{opacity: 0%;}
+    100%{display: none;}
+}
+
+#celebration{
+    position: fixed;
+    inset: 0;
+    /* z-index: 10; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: #fff;
+    font-size: 4em;
+    animation-name: fade;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+.container{
+    width: 40vw;
+    min-height: 30vh;
+    margin-top: 5rem;
+    background-color: hsla(0, 0%, 100%, 0.329);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: .5rem;
+}
+
+button{
+    padding: .75rem 2rem;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 100vw;
+    border: 0;
+    background-color: hsla(0, 0%, 100%, 0.473);
+    font-weight: 400;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 3px solid #a88beb;
+    transition-duration: 100ms;
+}
+button:hover{
+    background-color: hsla(0, 0%, 100%, 0.671);
+}
+
+.genratedImage{
+    position: relative;
+    display: none;
+    width: 90vw;
+    margin: 5vw;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: hsla(0, 0%, 100%, 0.329);
+    cursor: pointer;
+}
+
+.genratedImage::before{
+    content: 'Click on the Image to download ⬇️';
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    width: fit-content;
+    top: -3rem;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: hsla(0, 0%, 100%, 0.671);
+    padding: .5rem .75rem; 
+    border-radius: 100vw;
+}
+
+canvas{
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+      width: 80vw;
+      font-size: 1.1rem;
+    }
+    button{
+        margin-top: 1rem;
+        width: 100%;
+        font-size: 1em;
+    }
+}
