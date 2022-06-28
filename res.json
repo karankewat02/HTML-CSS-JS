@@ -1,0 +1,11 @@
+{
+  "attachments": [
+    {
+      "fallback": "People saying 'boo! to their friends has risen by 85% in the last year.... That's a frightening statistic.",
+      "footer": "<https://icanhazdadjoke.com/j/VfFlGJmOmb|permalink> - <https://icanhazdadjoke.com|icanhazdadjoke.com>",
+      "text": "People saying 'boo! to their friends has risen by 85% in the last year.... That's a frightening statistic."
+    }
+  ],
+  "response_type": "in_channel",
+  "username": "icanhazdadjoke"
+}

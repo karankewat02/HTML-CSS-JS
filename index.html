@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-genrator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>Meme Generator</h1>
+        <button onclick={getMeme()}>Get Started</button>
+    </div>    
+
+    <div class="container" id="memePreviewContainer">
+        <p id="memeText"></p>
+        <div id="camera"></div>
+        <button onclick={take_photo()}>Take Photo</button>
+        *give your reaction and take a photo
+    </div>
+
+    <div class="genratedImage">
+        <h1>Your meme is ready</h1>
+    </div>
+
+</body>
+    <script src="canvasConstructor.min.js"></script>
+    <script src="webcam.min.js"></script>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+</html>
