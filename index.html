@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme-genrator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="particles-js"></div>
@@ -14,19 +15,23 @@
         <button onclick={getMeme()}>Get Started</button>
     </div>    
 
-    <div class="container" id="memePreviewContainer">
+    <div class="container" id="memePreviewContainer" style=" display: none;">
         <p id="memeText"></p>
         <div id="camera"></div>
         <button onclick={take_photo()}>Take Photo</button>
-        *give your reaction and take a photo
+        <p>*give your reaction and take a photo</p>
     </div>
 
     <div class="genratedImage">
         <h1>Your meme is ready</h1>
     </div>
 
+    <div id="downloadBTN" onclick="{downloadImage()}">
+        <i class="fa-solid fa-download"></i>
+    </div>
+
 </body>
-    <script src="canvasConstructor.min.js"></script>
+    <script src="html2canvas.min.js"></script>
     <script src="webcam.min.js"></script>
     <script src="particles.min.js"></script>
     <script src="script.js"></script>

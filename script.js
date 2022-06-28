@@ -1,4 +1,3 @@
-
 // PARTICLE JS
 particlesJS("particles-js", {
     particles: {
@@ -63,14 +62,15 @@ const getMeme = async()=>{
     const res = await fetch(memeAPI);
     const data = await res.json();
 
+    const memePreviewContainer = document.querySelector('#memePreviewContainer');
+    memePreviewContainer.style.display = "block";
+
     const canvasContainer = document.querySelector('#memeText');
-    // canvasContainer.style.display = "block";
     canvasContainer.innerHTML = data.attachments[0].text;
     window.location.href=`${window.location.href}#memePreviewContainer`
 
     loadCamera();
 }
-
 
 const loadCamera = ()=>{
     Webcam.set({
@@ -82,27 +82,36 @@ const loadCamera = ()=>{
     Webcam.attach('#camera')
 }
 
-const take_photo = ()=>{
-    Webcam.snap(function(data_uri){
+const take_photo = async()=>{
 
-    // const canvasElement = document.getElementById('image');
-	// new CanvasConstructor.Canvas(canvasElement)
-    //     .setColor('#FFFFFF')
-    //     .printRectangle(0, 0, 1000, 300)
-    //     .printImage(CanvasConstructor.loadImage(data_uri), 325, 300, 675,800 )
-	// 	.setTextAlign('center')
-	// 	.setColor('#000000')
-	// 	.setTextFont('28px Impact')
-	// 	.printWrappedText(`'Meme Text'}`, 500, 100,900);
+        const generatedMeme = document.querySelector('.genratedImage');
+        generatedMeme.style.opacity = 1;
 
-        const memeText = document.querySelector('#memeText').innerHTML;
+        await Webcam.snap(function(data_uri){
+            const memeText = document.querySelector('#memeText').innerHTML;
 
-        document.querySelector(".genratedImage").innerHTML = `
-        <div id="result">
-            <p>${memeText}</p>
-            <img src=${data_uri} alt="">
-        </div>`
+            document.querySelector(".genratedImage").innerHTML = `
+            <H1>Your generated Meme !</H1>
+            <div id="result">
+                <p>${memeText}</p>
+                <img src=${data_uri} alt="">
+            </div>`;
+        
+        document.querySelector('#downloadBTN').style.opacity=1; 
+
     })
 }
 
+const downloadImage = ()=>{
+    const finalMemeDiv = document.querySelector('#result');
+
+    html2canvas(finalMemeDiv).then((canvas) => {
+        const base64image = canvas.toDataURL('image/png');
+        var anchor = document.createElement('a');
+        anchor.setAttribute('href',base64image);
+        anchor.setAttribute('download','meme.png');
+        anchor.click();
+        anchor.remove();
+    })
+}
 
