@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conerter</title>
+</head>
+
+
+
+<body style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display: flex;justify-content: center; align-items: center; flex-direction: column; min-height: 100vh;">
+    
+    <h1>Temperature Convert</h1>
+    <div class="ConverterBody" style="border: 2px solid #aaa; padding: 2rem; border-radius: .5rem;">
+
+        <input type="number" name="input" id="input" placeholder="Enter the Temp." >
+        <br><br>
+        
+        <p>Select the Unit</p>
+        <label for="Celsius">Celsius</label>
+        <input type="radio" id="Celsius" name="temp" value="Celsius" >
+        <label for="Fahrenheit">Fahrenheit</label>
+        <input type="radio" id="Fahrenheit" name='temp' value="Fahrenheit" >
+        <br>
+        <button onclick='convert()'>Convert</button>
+        <h3>Output : </h3>
+        <p id="result"></p>
+
+    </div>
+
+</body>
+    <script type="text/javascript">
+        
+        function convert(){
+            var input = document.getElementById("input").value;
+            var unit;
+            const Output = document.getElementById('result')
+            if(document.getElementById('Celsius').checked){
+                var ans = (input - 32)*(5/9)
+                ans = ans.toFixed(3)
+                Output.innerHTML=`${input} in Celsius is equal to ${ans} Fahrenheit`
+            }
+            if(document.getElementById('Fahrenheit').checked){
+                var ans = (input * (9/5)) + 32
+                ans = ans.toFixed(3)
+                Output.innerHTML=`${input} in Fahrenheit is equal to ${ans} Celsius`
+            }
+        }
+    </script>
+
+
+
+
+
+</html>
